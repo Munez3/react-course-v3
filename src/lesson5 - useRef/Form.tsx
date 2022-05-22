@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { IUser } from "./types";
 
 export default function Form({
@@ -11,6 +11,8 @@ export default function Form({
     lastName: "",
   });
 
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setNewUser((prev) => ({
       ...prev,
@@ -22,6 +24,7 @@ export default function Form({
     e.preventDefault();
     submitForm(newUser);
     setNewUser({ firstName: "", lastName: "" });
+    inputRef.current?.focus();
   }
   return (
     <>
@@ -29,6 +32,7 @@ export default function Form({
         <label>
           Imię:
           <input
+            ref={inputRef}
             name="firstName"
             value={newUser.firstName}
             onChange={handleChange}
