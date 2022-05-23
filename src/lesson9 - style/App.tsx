@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import Form from "./Form";
 import { IUser } from "./types";
 import UserList from "./UserList";
+import "./style.scss";
 
 let ID = 1;
 

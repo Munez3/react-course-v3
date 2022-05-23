@@ -2,13 +2,9 @@ import { IUser } from "./types";
 
 interface IProps {
   user: IUser;
-  removeUser: React.Dispatch<{
-    type: "remove";
-    payload: IUser;
-  }>;
 }
 
-export default function User({ user, removeUser }: IProps) {
+export default function User({ user }: IProps) {
   const { firstName, lastName } = user;
 
   if (!(firstName && lastName)) {
@@ -17,14 +13,7 @@ export default function User({ user, removeUser }: IProps) {
 
   return (
     <li>
-      Hello: {firstName} {lastName}{" "}
-      <button
-        onClick={() => {
-          removeUser({ type: "remove", payload: user });
-        }}
-      >
-        Usuń
-      </button>
+      Hello: {firstName} {lastName}
     </li>
   );
 }

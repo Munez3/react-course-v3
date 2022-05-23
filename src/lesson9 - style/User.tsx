@@ -1,3 +1,4 @@
+import Button from "./Button";
 import { IUser } from "./types";
 
 interface IProps {
@@ -16,15 +17,15 @@ export default function User({ user, removeUser }: IProps) {
   }
 
   return (
-    <li>
-      Hello: {firstName} {lastName}{" "}
-      <button
+    <li className="user-list__item">
+      {firstName} {lastName}{" "}
+      <Button
         onClick={() => {
           removeUser({ type: "remove", payload: user });
         }}
       >
         Usuń
-      </button>
+      </Button>
     </li>
   );
 }

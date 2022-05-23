@@ -15,7 +15,7 @@ export default memo(function UserList({
   removeUser,
 }: IProps): React.ReactElement {
   return (
-    <ul>
+    <ul className="user-list">
       {users.map((user) => (
         <User key={user.id} user={user} removeUser={removeUser} />
       ))}
