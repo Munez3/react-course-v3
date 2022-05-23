@@ -5,7 +5,7 @@ import UserList from "./UserList";
 
 let ID = 1;
 
-type ActionType = "add" | "remove";
+type ActionType = "add";
 
 function userReducer(
   state: IUser[],
@@ -16,8 +16,6 @@ function userReducer(
       const id = ID;
       ID += 1;
       return [...state, { ...action.payload, id: id.toString() }];
-    case "remove":
-      return state.filter((user) => user.id !== action.payload.id);
     default:
       return state;
   }
@@ -29,7 +27,7 @@ export default function App() {
   return (
     <div>
       <Form submitForm={dispatch} />
-      <UserList users={users} removeUser={dispatch} />
+      <UserList users={users} />
     </div>
   );
 }
