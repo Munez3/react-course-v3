@@ -11,6 +11,16 @@
       "firstName": "Jean",
       "lastName": "Dean",
       "age": "35"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "id": 3
+    },
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "id": 4
     }
   ]
 }
