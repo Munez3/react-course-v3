@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./lesson15 - useEffect/App";
+import Invoice from "./lesson16 - test + hook/Invoice";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -10,7 +11,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Invoice />
   </React.StrictMode>
 );
 
