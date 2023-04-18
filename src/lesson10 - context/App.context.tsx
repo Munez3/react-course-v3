@@ -15,8 +15,6 @@ interface IAppContext {
   dispatch: Dispatch<{ type?: ActionType; payload: IUser }>;
 }
 
-const AppContext = createContext<IAppContext | undefined>(undefined);
-
 function userReducer(
   state: IUser[],
   action: { type?: ActionType; payload: IUser }
@@ -32,6 +30,8 @@ function userReducer(
       return state;
   }
 }
+
+const AppContext = createContext<IAppContext | undefined>(undefined);
 
 export default function AppProvider({
   children,

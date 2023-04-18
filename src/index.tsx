@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./lesson15 - useEffect/App";
+import App from "./lesson14 - axios/App";
 import Invoice from "./lesson16 - test + hook/Invoice";
 import reportWebVitals from "./reportWebVitals";
 

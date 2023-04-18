@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import useInput from "./useInput";
 
 export default function Invoice(): React.ReactElement {
-  const net = useInput("0");
+  const net = useInput("10");
   const vat = useInput("0");
   const gross = useInput("0");
 
